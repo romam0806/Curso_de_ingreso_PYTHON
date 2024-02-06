@@ -33,8 +33,11 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        nombre_ingresado= prompt(title="pregunta",prompt="¿como te llamas?")
+        self.txt_nombre.delete(0,100)
+        self.txt_nombre.insert(0, nombre_ingresado)
         
+    
     
 if __name__ == "__main__":
     app = App()

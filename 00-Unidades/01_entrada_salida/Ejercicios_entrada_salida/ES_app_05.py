@@ -2,11 +2,12 @@ import tkinter
 from tkinter.messagebox import showinfo as alert
 from tkinter.messagebox import askyesno as question
 from tkinter.simpledialog import askstring as prompt
+from turtle import title
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre:Román
+apellido:Nocetti
 ---
 Ejercicio: entrada_salida_05
 ---
@@ -40,8 +41,9 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
-
+       nombre= self.txt_nombre.get()
+       edad= self.txt_edad.get()
+       alert("datos","usted se llama " + nombre + " y su edad es de " + edad)
         
     
 if __name__ == "__main__":

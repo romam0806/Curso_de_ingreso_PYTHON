@@ -26,8 +26,10 @@ class App(customtkinter.CTk):
         self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
     def btn_mostrar_on_click(self):
-        alert(title="ej 01",message="esto no anda, funciona")
-
+        title= "hola py"
+        message= "esto no anda, funciona"
+        alert(title, message )
+        
 
 if __name__ == "__main__":
     app = App()
