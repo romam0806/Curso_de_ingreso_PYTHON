@@ -27,11 +27,13 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+
         nombre_ingresado = prompt(title="pregunta",prompt="¿cual es su nombre?")
+       
         alert("su nombre es", nombre_ingresado)
+
+
         
-        
-    
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")

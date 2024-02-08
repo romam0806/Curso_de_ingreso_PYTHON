@@ -43,8 +43,11 @@ class App(customtkinter.CTk):
         operador_b = self.txt_operador_b.get()
 
         suma = int(operador_a) + int(operador_b)
+
         alert("suma", f"el resultado es {suma}")
-     
+
+        self.txt_operador_a.delete(0,tkinter.END)
+        self.txt_operador_b.delete(0,tkinter.END)
         
 if __name__ == "__main__":
     app = App()

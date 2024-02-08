@@ -53,29 +53,45 @@ class App(customtkinter.CTk):
         operador_b = self.txt_operador_b.get()
 
         suma = int(operador_a) + int(operador_b)
+
         alert("suma", f"el resultado es {suma}")
 
+        self.txt_operador_a.delete(0,tkinter.END)
+        self.txt_operador_b.delete(0,tkinter.END)
+        
     def btn_restar_on_click(self):
         operador_a = self.txt_operador_a.get() 
         operador_b = self.txt_operador_b.get()
         
         resta = int(operador_a) - int(operador_b)
+
         alert("resta", f"el resultado es {resta}")
+
+        self.txt_operador_a.delete(0,tkinter.END)
+        self.txt_operador_b.delete(0,tkinter.END)
 
     def btn_multiplicar_on_click(self):
         operador_a = self.txt_operador_a.get() 
         operador_b = self.txt_operador_b.get()
 
         multiplicación = int(operador_a) * int(operador_b)
+
         alert("multiplicacion", f"el resultado es {multiplicación}")
+
+        self.txt_operador_a.delete(0,tkinter.END)
+        self.txt_operador_b.delete(0,tkinter.END)
 
     def btn_dividir_on_click(self):
         operador_a = self.txt_operador_a.get() 
         operador_b = self.txt_operador_b.get()
         
-        división = int(operador_a) % int(operador_b)
+        división = int(operador_a) // int(operador_b)
+
         alert("división", f"el resultado es {división}")
         
+        self.txt_operador_a.delete(0,tkinter.END)
+        self.txt_operador_b.delete(0,tkinter.END)
+
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")
