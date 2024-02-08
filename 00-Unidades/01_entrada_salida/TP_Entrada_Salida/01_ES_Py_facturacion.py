@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre:Román
+apellido:Nocetti
 ---
 TP: ES_Facturaciones
 ---
@@ -52,13 +52,61 @@ class App(customtkinter.CTk):
         self.btn_total_iva.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
     def btn_total_on_click(self):
-        pass
+        importe_1 = self.txt_importe_1.get()
+        importe_2 = self.txt_importe_2.get()
+        importe_3 = self.txt_importe_3.get()
+         
+        importe_1 = int(importe_1)
+        importe_2 = int(importe_2)
+        importe_3 = int(importe_3)
+
+        suma = (importe_1) + (importe_2) + (importe_3)
+        
+        alert("suma", f"el precio total seria : {suma}")
+        
+        self.txt_importe_1.delete(0,tkinter.END)
+        self.txt_importe_2.delete(0,tkinter.END)
+        self.txt_importe_3.delete(0,tkinter.END)
 
     def btn_promedio_on_click(self):
-        pass
+        importe_1 = self.txt_importe_1.get()
+        importe_2 = self.txt_importe_2.get()
+        importe_3 = self.txt_importe_3.get()
+         
+        importe_1 = int(importe_1)
+        importe_2 = int(importe_2)
+        importe_3 = int(importe_3)
+        
+        suma = (importe_1) + (importe_2) + (importe_3)
+        cuenta1= (suma) // 3
+
+        alert("promedio", f"el promedio total seria : {cuenta1}")
+
+        self.txt_importe_1.delete(0,tkinter.END)
+        self.txt_importe_2.delete(0,tkinter.END)
+        self.txt_importe_3.delete(0,tkinter.END)
+
 
     def btn_total_iva_on_click(self):
-        pass      
+        importe_1 = self.txt_importe_1.get()
+        importe_2 = self.txt_importe_2.get()
+        importe_3 = self.txt_importe_3.get()
+         
+        importe_1 = int(importe_1)
+        importe_2 = int(importe_2)
+        importe_3 = int(importe_3)
+
+        suma = (importe_1) + (importe_2) + (importe_3)
+        cuenta1 = (suma) * 21
+        cuenta2 = cuenta1 // 100
+        cuenta3 = suma + cuenta2
+
+        alert("total con iva", f"el total con iva es {cuenta3}")
+
+        self.txt_importe_1.delete(0,tkinter.END)
+        self.txt_importe_2.delete(0,tkinter.END)
+        self.txt_importe_3.delete(0,tkinter.END)
+     
     
 if __name__ == "__main__":
     app = App()
