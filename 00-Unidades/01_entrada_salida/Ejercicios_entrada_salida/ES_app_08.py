@@ -43,11 +43,12 @@ class App(customtkinter.CTk):
         operador_a = self.txt_operador_a.get()
         operador_b = self.txt_operador_b.get()
         
-        div = int(operador_a) % int(operador_b)
+        div = int(operador_a) // int(operador_b)
 
         alert("resultado" , f"el resto de la division {operador_a} por {operador_b} es {div}")
         
-        
+        self.txt_operador_a.delete(0,tkinter.END)
+        self.txt_operador_b.delete(0,tkinter.END)
     
 if __name__ == "__main__":
     app = App()

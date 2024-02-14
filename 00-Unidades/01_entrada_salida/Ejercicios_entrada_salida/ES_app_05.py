@@ -47,6 +47,7 @@ class App(customtkinter.CTk):
        alert("datos","usted se llama " + nombre + " y su edad es de " + edad)
       
        self.txt_nombre.delete(0,tkinter.END)
+       self.txt_edad.delete(0,tkinter.END)
     
 if __name__ == "__main__":
     app = App()
