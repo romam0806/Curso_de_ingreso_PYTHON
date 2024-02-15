@@ -6,8 +6,8 @@ import customtkinter
 
 
 '''
-nombre:
-apellido:
+nombre:Román
+apellido:Nocetti
 ---
 Ejercicio: Match_09
 ---
@@ -57,8 +57,86 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
-        pass
-            
+        destino = self.combobox_destino.get()
+        estacion = self.combobox_estaciones.get()
+
+        match (estacion, destino):
+            case ("Invierno", "Bariloche"):
+                aumento = int (15000 *20/100)
+                cuenta_final= int (15000 + aumento)
+                mensaje= f"el precio final es de {cuenta_final}"
+
+            case ("Invierno", "Mar del plata"):
+                descuento = int (15000 *20/100)
+                cuenta_final = int (15000 - descuento)
+                mensaje= f"el precio final es de {cuenta_final}"
+
+            case ("Invierno", "Cataratas"):
+                descuento = int (15000 *10/100)
+                cuenta_final = int (15000 - descuento)
+                mensaje= f"el precio final es de {cuenta_final}"
+
+            case ("Invierno", "Cordoba"):
+                descuento = int (15000 *10/100)
+                cuenta_final = int (15000 - descuento)
+                mensaje= f"elprecio final es de {cuenta_final}"
+
+            case ("Verano", "Bariloche"):
+                descuento = int (15000 *20/100)
+                cuenta_final= int (15000 - descuento)
+                mensaje = f"el precio final es de {cuenta_final}"
+
+            case ("Verano", "Mar del plata"):
+                aumento = int (15000 *20/100)
+                cuenta_final = int (15000 + aumento)
+                mensaje = f"el precio final es de {cuenta_final}"
+
+            case ("Verano", "Cataratas"):
+                aumento = int (15000 *10/100)
+                cuenta_final = int (15000 + aumento)
+                mensaje = f"el precio final es de {cuenta_final}"
+
+            case ("Verano", "Cordoba"):
+                aumento = int (15000 *10/100)
+                cuenta_final = int (15000 + aumento)
+                mensaje = f"el precio final es de {cuenta_final}"
+
+            case ("Otoño", "Bariloche"):
+                aumento = int (15000 *20/100)
+                cuenta_final = int (15000 + aumento)
+                mensaje = f"el precio final es de {cuenta_final}"
+
+            case ("Otoño", "Mar del plata"):
+                aumento = int (15000 *10/100)
+                cuenta_final = int (15000 + aumento)
+                mensaje= f"el precio final es de {cuenta_final}"
+
+            case ("Otoño", "Cataratas"):
+                aumento = int (15000 *10/100)
+                cuenta_final = int (15000 + aumento)
+                mensaje= f"el precio final es de {cuenta_final}"
+
+            case ("Otoño", "Cordoba"):
+                mensaje= "el precio final es de 15000"
+
+            case ("Primavera", "Bariloche"):
+                aumento = int (15000 *20/100)
+                cuenta_final = int (15000 + aumento)
+                mensaje = f"el precio final es de {cuenta_final}"
+
+            case ("Primavera", "Mar del plata"):
+                aumento = int (15000 *10/100)
+                cuenta_final = int (15000 + aumento)
+                mensaje= f"el precio final es de {cuenta_final}"
+
+            case ("Primavera", "Cataratas"):
+                aumento = int (15000 *10/100)
+                cuenta_final = int (15000 + aumento)
+                mensaje= f"el precio final es de {cuenta_final}"
+
+            case ("Primavera", "Cordoba"):
+                mensaje= "el precio final es de 15000"
+        alert("precio", mensaje)
     
 if __name__ == "__main__":
     app = App()
