@@ -56,31 +56,30 @@ class App(customtkinter.CTk):
             descuento = 0.50
         elif cantidad_int == 5:
             if marca == "ArgentinaLuz":
-                descuento = 0.40
+                descuento = 0.60
             else:
-                descuento = 0.30
+                descuento = 0.70
         elif cantidad_int == 4:
             if marca == "ArgentinaLuz" or marca == "FelipeLamparas":
-                descuento = 0.25
+                descuento = 0.75
             else:
-                descuento = 0.20
+                descuento = 0.80
         elif cantidad_int == 3:
             if marca == "ArgentinaLuz":
-                descuento = 0.15
+                descuento = 0.85
             elif marca == "FelipeLamparas":
-                descuento = 0.10
+                descuento = 0.90
             else:
-                descuento = 0.05
+                descuento = 0.95
         else:
             pass
 
-        descuento_total = precio_final * descuento
-        volar_total = precio_final - descuento_total
+        valor_total = precio_final  * descuento
 
-        if volar_total > 4000:
-            valor_total = valor_total - (valor_total * 0.95)
+        if valor_total > 4000:
+            valor_total = valor_total * 0.95
 
-        alert("informacion", f"El precio final con descuento es {precio_final}")
+        alert("informacion", f"El precio final con descuento es {valor_total}")
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")

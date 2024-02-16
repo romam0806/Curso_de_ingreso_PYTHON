@@ -48,10 +48,42 @@ class App(customtkinter.CTk):
         cantidad_int = int(cantidad)
 
         precio_lamparas = 800
-        precio_final=precio_lamparas * cantidad_int
-
         descuento = 0
-        
+        final= precio_lamparas * cantidad_int
+
+        match (cantidad_int):
+            case 6 | 7 | 8 | 9 | 10 | 11 | 12:
+                descuento = 50/100
+            case 5:
+                match (marca):
+                    case "ArgentinaLuz"  :
+                        descuento = 60/100 
+                    case _ :
+                        descuento = 70/100 
+            case 4:
+                match marca:
+                    case "ArgentinaLuz" | "FelipeLamparas":
+                        descuento = 75/100 
+                    case _ :
+                        descuento = 80/100 
+
+            case 3:
+                match marca:
+                    case "ArgentinaLuz" :
+                        descuento = 85/100 
+                    case "felipeLamparas":
+                        descuento = 90/100 
+                    case _ :
+                        descuento = 95/100 
+
+
+        cuenta_final = final * descuento 
+
+        if cuenta_final > 4000:
+                cuenta_final= cuenta_final *  95/100 
+
+        alert("precio", cuenta_final)
+
     
 if __name__ == "__main__":
     app = App()
