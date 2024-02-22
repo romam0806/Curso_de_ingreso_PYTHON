@@ -21,7 +21,7 @@ class App(customtkinter.CTk):
         super().__init__()
         
         self.title("UTN FRA")
-       
+        
         self.btn_mostrar = customtkinter.CTkButton(master=self, text="Mostrar", command=self.btn_mostrar_on_click)
         self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
@@ -29,7 +29,7 @@ class App(customtkinter.CTk):
     def btn_mostrar_on_click(self):
 
         nombre_ingresado = prompt(title="pregunta",prompt="¿cual es su nombre?")
-       
+        
         alert("su nombre es", nombre_ingresado)
 
 
